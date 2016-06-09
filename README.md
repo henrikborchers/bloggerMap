@@ -1,6 +1,6 @@
 # BloggerMap 
 
-BloggerMap is just a Javascript class that renders a list of blogger post entrys to a google maps.
+BloggerMap is just a Javascript class that renders a list of blogger post entrys to a google map.
 
 ![alt tag](https://raw.githubusercontent.com/henrikborchers/bloggerMap/master/example.png)
 
