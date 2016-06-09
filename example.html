@@ -1,0 +1,38 @@
+<div id="map-canvas" style="background-color: rgba(222, 187, 0,0.3); height: 600px; margin: 0px; padding: 0px; width: 100%;">
+</div>
+   
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+<script src="http://www.geocodezip.com/scripts/v3_epoly.js"></script>
+<script src="https://rawgit.com/henrikborchers/bloggerMap/master/bloggerMap.js"></script>
+    
+<script type="text/javascript">
+  
+var map;
+
+function initialize(json){
+       
+    var postArray = json.feed.entry;
+
+    var mapOptions = {
+        zoom: 4,
+        center: new google.maps.LatLng(-33, 151),
+        mapTypeControl: false,  
+        zoomControl: true,
+        zoomControlOptions: {
+            style: google.maps.ZoomControlStyle.SMALL
+        }
+    };
+
+    map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
+
+    var bloggerMap = new BloggerMap();
+    
+    bloggerMap.init(map);    
+
+    bloggerMap.initialize(postArray);  
+}
+
+ </script>
+ 
+<script src="/feeds/posts/default?max-results=499&amp;orderby=published&amp;alt=json-in-script&amp;callback=initialize">
+</script>
