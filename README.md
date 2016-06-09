@@ -21,12 +21,14 @@ BloggerMap is just a Javascript class that renders a list of blogger post entrys
 <div id="map-canvas" style="background-color: rgba(222, 187, 0,0.3); height: 600px; margin: 0px; padding: 0px; width: 100%;">
 </div>
 ```
+
  ## Add the libs
 ```html 
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 <script src="http://www.geocodezip.com/scripts/v3_epoly.js"></script>
 <script src="https://rawgit.com/henrikborchers/bloggerMap/master/bloggerMap.js"></script>
 ```
+
  ## Create a google.maps.Map object
 ```html 
 <script type="text/javascript">
@@ -44,12 +46,14 @@ function initialize(json){
     };
     map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
 ```
+
  ## Use the BloggerMap-Class
 ```html 
     var bloggerMap = new BloggerMap();
     bloggerMap.init(map);    
     bloggerMap.initialize(postArray);  
 ```
+
  ## Load the feeds from your blog
 ```html 
 <script src="/feeds/posts/default?max-results=499&amp;orderby=published&amp;alt=json-in-script&amp;callback=initialize">
