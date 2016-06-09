@@ -35,7 +35,7 @@ BloggerMap.prototype.setMarkerIcons = function (markerIconArray) {
  *
  * @this {BloggerMap}
  */
-BloggerMap.prototype.showloadedPosts = function (postFeedCallback) {
+BloggerMap.prototype.showLoadedPosts = function (postFeedCallback) {
     var postArray = postFeedCallback.feed.entry;
     console.log(postArray);
     initialize(postArray);
